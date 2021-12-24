@@ -1,0 +1,27 @@
+using System.Collections.Generic;
+using System.Linq;
+
+namespace Migratory_Birds
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {            
+            List<int> arr = new List<int> { 1, 2, 3, 4, 5, 4, 3, 2, 1, 3, 4 };
+            Dictionary<int,int> countarr = new Dictionary<int, int>();
+            for (int i = 0; i < arr.Count; i++)
+            {
+                if (countarr.ContainsKey(arr[i]))
+                {
+                    countarr[arr[i]]++;
+                }
+                else
+                {
+                    countarr.Add(arr[i], 1);
+                }                              
+            }
+             var result = countarr.OrderByDescending(x => x.Value).FirstOrDefault().Key;
+        }
+       
+    }
+}
