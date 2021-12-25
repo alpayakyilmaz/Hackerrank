@@ -1,0 +1,38 @@
+using System;
+using System.Collections.Generic;
+
+namespace Apple_and_Orange
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int a = 5;
+            int b = 15;
+            int s = 7;
+            int t = 11;
+            int applesCount = 0;
+            int orangeCount = 0;
+            List<int> apples = new List<int> {-2 , 2 , 1};
+            List<int> oranges = new List<int> {5 , -6};
+            for (int i = 0; i < apples.Count; i++)
+            {
+                apples[i] += a;
+                if(apples[i] >= s && apples[i] <= t)
+                {
+                    applesCount++;
+                }
+            }
+            for (int i = 0; i < oranges.Count; i++)
+            {
+                oranges[i] += b;
+                if (oranges[i] >= s && oranges[i] <= t )
+                {
+                    orangeCount++;
+                }
+            }
+            
+            Console.WriteLine(applesCount + " " + orangeCount);
+        }
+    }
+}
