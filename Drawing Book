@@ -1,0 +1,23 @@
+using System;
+
+namespace drawing_book
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int n = 6;
+            int p = 2;
+            int start = (int)(p / 2);
+            int end = (int)(n / 2 - start);
+            if (start < end)
+            {
+                Console.WriteLine(start);                
+            }
+            else
+            {
+                Console.WriteLine(end);
+            }   
+        }
+    }
+}
